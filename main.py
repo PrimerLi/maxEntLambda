@@ -8,6 +8,7 @@ import newton
 import printFile
 import nan
 import model
+import solver
 
 def read_spectral(fileName):
     import numpy as np
@@ -85,8 +86,9 @@ def main():
         sigma = 1
         model.generateModel(mu, sigma)
 
-    os.system("cp model.txt A_initial.txt")
-    omega, A_initial = read_spectral("model.txt")
+    if (not os.path.exists("A_initial.txt")):
+        os.system("cp model.txt A_initial.txt")
+    omega, A_initial = read_spectral("A_initial.txt")
     Nomega = len(omega)
     D = np.zeros(Nomega)
     for i in range(Nomega):
@@ -122,12 +124,13 @@ def main():
 
     if (True):
         alpha = []
-        for i in range(30):
+        for i in range(20):
             alpha.append(a0*np.exp(-i*b0))
         
         ofile = open("alpha.txt", "a")
         for i in range(len(alpha)):
-            A_updated = newton.newton(alpha[i], G_real_rotated, G_imag_rotated, K_real_rotated, K_imag_rotated, omega, A_initial, D, LambdaInverse)
+            #A_updated = newton.newton(alpha[i], G_real_rotated, G_imag_rotated, K_real_rotated, K_imag_rotated, omega, A_initial, D, LambdaInverse)
+            A_updated = solver.solver(alpha[i], G_real_rotated, G_imag_rotated, K_real_rotated, K_imag_rotated, omega, A_initial, D, LambdaInverse)
             if (nan.array_isnan(A_updated)):
                 omega, A_initial = read_spectral("A_initial.txt")
                 continue
