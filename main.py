@@ -60,6 +60,9 @@ def readFiles(Greal, Gimag):
     
     return omega_n, G_real, G_imag
 
+def norm(vector):
+    import numpy as np
+    return np.sqrt(vector.dot(vector))
 
 def main():
     import os
@@ -124,7 +127,8 @@ def main():
 
     if (True):
         alpha = []
-        for i in range(20):
+        error = []
+        for i in range(40):
             alpha.append(a0*np.exp(-i*b0))
         
         ofile = open("alpha.txt", "a")
@@ -138,9 +142,12 @@ def main():
             printFile.printFile(omega, A_updated, output)
             os.system("cp " +  output + " A_initial.txt")
             ofile.write(str(alpha[i]) + "\n")
-            print "alpha = ", alpha[i]
+            diff = norm(A_updated - A_initial)
+            error.append(diff)
+            print "alpha = ", alpha[i], ", error = ", diff
             A_initial = A_updated
         ofile.close()
+        printFile.printFile(alpha, error, "error_alpha.txt")
 
     return 0
 

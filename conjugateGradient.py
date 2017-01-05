@@ -51,7 +51,10 @@ def main():
     for i in range(dimension):
         b[i] = random.randint(0, dimension)
     solution = conjugateGradient(A, b)
-    print norm(b - A.dot(solution))
+    test = A.dot(solution)
+    for i in range(len(b)):
+        print b[i], "    ", test[i]
+    print norm(b - test)
     return 0
 
 if __name__ == "__main__":
