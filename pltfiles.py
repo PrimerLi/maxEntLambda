@@ -22,7 +22,7 @@ def main():
         print "Input file name as arguments. "
         return -1
     else:
-        colors = ["b-o", 'r-o', 'c-o', 'm-o', 'g-o']
+        colors = ["b", 'r', 'c', 'm', 'g']
         if (len(sys.argv) > len(colors)+1):
             print "Too many files to plot. "
             return -1

@@ -79,12 +79,12 @@ def main():
     if (not os.path.exists("model.txt")):
         model.generateModel(0, 1)
     omega = []
-    model = []
+    model_function = []
     ifile = open("model.txt", "r")
     for i, string in enumerate(ifile):
         a = string.split()
         omega.append(float(a[0]))
-        model.append(float(a[1]))
+        model_function.append(float(a[1]))
     ifile.close()
     Nomega = len(omega)
    

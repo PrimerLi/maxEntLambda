@@ -128,7 +128,7 @@ def main():
     if (True):
         alpha = []
         error = []
-        for i in range(40):
+        for i in range(20):
             alpha.append(a0*np.exp(-i*b0))
         
         ofile = open("alpha.txt", "a")
@@ -148,6 +148,7 @@ def main():
             A_initial = A_updated
         ofile.close()
         printFile.printFile(alpha, error, "error_alpha.txt")
+        os.system("python pltfiles.py A_initial.txt")
 
     return 0
 

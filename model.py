@@ -8,8 +8,8 @@ def generateModel(mu, sigma):
     import sys
     omega = []
     model = []
-    Nomega = 101
-    omega_lower = -5
+    Nomega = 501
+    omega_lower = -20
     omega_upper = -omega_lower
     domega = (omega_upper - omega_lower)/float(Nomega-1)
     for i in range(Nomega):
@@ -23,4 +23,6 @@ def main():
     generateModel(0, 1)
     return 0
 
-main()
+if __name__ == "__main__":
+    import sys
+    sys.exit(main())
