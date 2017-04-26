@@ -5,7 +5,7 @@ A deteailed description of the program is in the file algorithm.pdf.
 Guidelines about how to run the program. 
 1. What does the programs accomplish? 
 
-    The program takes as input the Matsubara imaginary frequency Green's function and the covariance matrix, and output the spectral function of the corresponding Green's function. 
+    The program takes as input the Matsubara imaginary frequency Green's function and the covariance matrix, and prints out the spectral function of the corresponding Green's function. 
   
 2. How to run the program?
 
