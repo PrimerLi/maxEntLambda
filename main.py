@@ -71,7 +71,9 @@ def main():
 
     if (len(sys.argv) == 1):
         print "a0 = sys.argv[1], b0 = sys.argv[2]. alpha = a0*exp(-i*b0). "
-        return -1
+        a0 = 10000
+        b0 = 0.05
+        print "The default value of a0 =", a0, " and b0 = ", b0, " has been chosen. "
     if (len(sys.argv) == 2):
         a0 = float(sys.argv[1])
         b0 = 0.05
@@ -128,7 +130,7 @@ def main():
     if (True):
         alpha = []
         error = []
-        for i in range(20):
+        for i in range(30):
             alpha.append(a0*np.exp(-i*b0))
         
         ofile = open("alpha.txt", "a")
