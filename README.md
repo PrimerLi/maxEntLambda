@@ -3,7 +3,7 @@ max entropy method in python, covariance matrix is diagonalized and the Green fu
 A deteailed description of the program is in the file algorithm.pdf. 
 
 Guidelines about how to run the program. 
-1. What does the programs accomplish? 
+1. What does the program accomplish? 
 
     The program takes as input the Matsubara imaginary frequency Green's function and the covariance matrix, and prints out the spectral function of the corresponding Green's function. 
   
