@@ -13,4 +13,4 @@ Guidelines about how to run the program.
     
     Second, run the command "python readmc.py" in your terminal. This step reads in the three input files, and generates the files that will be used in step 3. 
     
-    Third, run the command "python main.py (optional parameters)" in your terminal. You can specifiy how to anneal the result through the optional parameters, or you can use the default values set in the program. The final spectral function is contained in the file A_initial.txt. You can delete all the other intermediate txt files that are generated when the program is running. 
+    Third, run the command "python main.py (optional parameters)" in your terminal. You can specifiy how to anneal the result through the optional parameters, or you can use the default values set in the program. The final spectral function is contained in the file A_initial.txt. You can delete all the other intermediate txt files that are generated as the program runs. 
