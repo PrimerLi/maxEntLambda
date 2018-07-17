@@ -1,6 +1,7 @@
 # maxEntLambda
-max entropy method in python, covariance matrix is diagonalized and the Green function and kernel matrix are rotated into the eigen-space.
-A deteailed description of the program is in the file algorithm.pdf. 
+max entropy method in python, covariance matrix is diagonalized and the Green function and kernel matrix are rotated into the eigen-space. 
+
+See this link for a detailed program documentation: https://github.com/PrimerLi/maxEntLambda/blob/master/algorithm.pdf
 
 Guidelines about how to run the program. 
 1. What does the program accomplish? 
