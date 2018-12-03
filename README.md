@@ -1,8 +1,6 @@
 # maxEntLambda
 max entropy method in python, covariance matrix is diagonalized and the Green function and kernel matrix are rotated into the eigen-space. 
 
-See this link for a detailed program documentation: https://github.com/PrimerLi/maxEntLambda/blob/master/algorithm.pdf
-
 Guidelines about how to run the program. 
 1. What does the program accomplish? 
 
@@ -15,3 +13,15 @@ Guidelines about how to run the program.
     Second, run the command "python readmc.py" in your terminal. This step reads in the three input files, and generates the files that will be used in step 3. 
     
     Third, run the command "python main.py (optional parameters)" in your terminal. You can specifiy how to anneal the result through the optional parameters, or you can use the default values set in the program. The final spectral function is contained in the file A_initial.txt. You can delete all the other intermediate txt files that are generated as the program runs. 
+
+See the link below for a detailed program documentation (in Chinese):
+
+https://zhuanlan.zhihu.com/p/24759384
+
+See this link for a detailed program documentation in English:
+
+https://github.com/PrimerLi/maxEntLambda/blob/master/algorithm.pdf
+
+A formal presentation of this algorithm can be found here:
+
+https://arxiv.org/abs/1810.06147
