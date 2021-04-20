@@ -16,7 +16,7 @@ Guidelines about how to run the program.
 
 See the link below for a detailed program documentation (in Chinese):
 
-https://zhuanlan.zhihu.com/p/24759384
+https://zhuanlan.zhihu.com/p/366209195
 
 See this link for a detailed program documentation in English:
 
